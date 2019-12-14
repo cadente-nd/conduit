@@ -107,6 +107,7 @@ class Editor extends React.Component {
                     <input
                       className="form-control form-control-lg"
                       type="text"
+                      data-test="title"
                       placeholder="Article Title"
                       value={this.props.title}
                       onChange={this.changeTitle} />
@@ -116,6 +117,7 @@ class Editor extends React.Component {
                     <input
                       className="form-control"
                       type="text"
+                      data-test="description"
                       placeholder="What's this article about?"
                       value={this.props.description}
                       onChange={this.changeDescription} />
@@ -125,6 +127,7 @@ class Editor extends React.Component {
                     <textarea
                       className="form-control"
                       rows="8"
+                      data-test="content"
                       placeholder="Write your article (in markdown)"
                       value={this.props.body}
                       onChange={this.changeBody}>
@@ -135,6 +138,7 @@ class Editor extends React.Component {
                     <input
                       className="form-control"
                       type="text"
+                      data-test="tags"
                       placeholder="Enter tags"
                       value={this.props.tagInput}
                       onChange={this.changeTagInput}
@@ -159,6 +163,7 @@ class Editor extends React.Component {
                   <button
                     className="btn btn-lg pull-xs-right btn-primary"
                     type="button"
+                    data-test="submit-article"
                     disabled={this.props.inProgress}
                     onClick={this.submitForm}>
                     Publish Article
